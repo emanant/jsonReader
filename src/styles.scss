@@ -1,1 +1,121 @@
+@import "./app/theme/variable";
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// @import "./app/theme/theme.scss";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+// Define a dark theme
+$light-primary: mat-palette($mat-light-blue);
+$light-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-warn: mat-palette($mat-deep-orange);
+
+// Define a dark theme
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+
+// $jsonReader-warn: mat-palette($mat-red);
+$jsonReader-light-theme: mat-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+      warn: $light-warn,
+    ),
+  )
+);
+
+$jsonReader-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
+    ),
+  )
+);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($jsonReader-light-theme);
+
+.jsonReader-dark-theme {
+  @include angular-material-color($jsonReader-dark-theme);
+}
+
+$dark-foreground-palette: map-get($jsonReader-dark-theme, foreground);
+.common-colors {
+  --unique-color: mediumseagreen;
+  --light-blue: darkslateblue;
+}
+.dark-colors {
+  background-color: var(--background-color-2);
+  --background-color-1: #12181b;
+  --background-color-2: darkslategray;
+  // color: mat-color($dark-foreground-palette, text);
+  color: var(--gray2);
+  --nav-shadow: 4px 0 10px -3px #010101;
+}
+
+$light-foreground-palette: map-get($jsonReader-light-theme, foreground);
+.light-colors {
+  background-color: var(--background-color-2);
+  --background-color-1: whitesmoke;
+  --background-color-2: white;
+  // color: mat-color($light-foreground-palette, text);
+  color: var(--gray4);
+  --nav-shadow: 4px 0 10px -3px #c1c1c1;
+  --card-shadow: 0 4px 8px rgba(0, 30, 84, 0.12);
+}
+
+.dark-theme {
+  --background: var(--gray6);
+  --text-color: var(--gray2);
+  --h-color: #fff;
+  --nav-shadow: 4px 0 10px -3px #010101;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+  --toc-shadow: rgba(0, 0, 0, 0.7) 0px 10px 20px 0px;
+  --nav-bg: var(--gray5);
+  --tag-bg: var(--gray4);
+  --code-bg: #22262f;
+  --card-bg: var(--gray5);
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  --h-border: 2px dashed var(--nav-bg);
+  --card-radius: 0.25em;
+  transition: all 0.3s ease;
+}
+.light-theme {
+  --background: var(--gray0);
+  --text-color: var(--gray4);
+  --h-color: var(--gray6);
+  --nav-shadow: 4px 0 10px -3px #c1c1c1;
+  --card-shadow: 0 4px 8px rgba(0, 30, 84, 0.12);
+  --toc-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px 0px;
+  --nav-bg: #fff;
+  --tag-bg: var(--gray2);
+  --code-bg: #fff;
+  --card-bg: #fff;
+  --overlay-bg: hsla(0, 0%, 100%, 0.9);
+  --h-border: 2px dashed var(--gray1);
+  transition: all 0.5s ease;
+}
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

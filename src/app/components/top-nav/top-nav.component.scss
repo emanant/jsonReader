@@ -1,0 +1,28 @@
+.top-navbar {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  transition: all 0.5s;
+  z-index: 99;
+  border-bottom-left-radius: 20px;
+  box-shadow: var(--nav-shadow);
+  overflow: hidden;
+  &.scrollUp {
+    transform: translateY(-40px);
+  }
+}
+
+button {
+  // transition: all 0.3s ease;
+  filter: opacity(50%);
+  &:hover {
+    filter: none;
+  }
+}
+
+.fixed {
+  background-color: var(--unique-color);
+  color: white;
+  filter: none;
+  border-radius: 0;
+}

@@ -1,0 +1,23 @@
+<!-- [class.dark-colors]="isDarkTheme" -->
+<div
+  #topnav
+  class="top-navbar"
+  [ngClass]="isDarkTheme ? 'dark-colors' : 'light-colors'"
+  [class.scrollUp]="hideNavBar"
+>
+  <button mat-icon-button class="fixed">
+    <mat-icon>spa</mat-icon>
+  </button>
+  <button
+    *ngIf="isDarkTheme; else lightModeBtn"
+    mat-icon-button
+    (click)="toggleTheme()"
+  >
+    <mat-icon>dark_mode</mat-icon>
+  </button>
+  <ng-template #lightModeBtn>
+    <button mat-icon-button (click)="toggleTheme()">
+      <mat-icon>light_mode</mat-icon>
+    </button>
+  </ng-template>
+</div>

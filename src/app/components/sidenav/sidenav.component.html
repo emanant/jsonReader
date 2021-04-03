@@ -1,0 +1,58 @@
+<!-- [ngClass]="isDarkTheme ? 'dark-colors' : 'light-colors'" -->
+<div class="sidenav" [ngClass]="isDarkTheme ? 'dark-colors' : 'light-colors'">
+  <button
+    mat-icon-button
+    matTooltip="Home"
+    matTooltipPosition="after"
+    matTooltipClass="tooltip-custom"
+    [routerLink]="['/home']"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon [inline]="true">house</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    matTooltip="Upload"
+    matTooltipPosition="after"
+    matTooltipClass="tooltip-custom"
+    [routerLink]="['/upload']"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon [inline]="true">upload</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    matTooltip="Read Uploaded Files"
+    matTooltipPosition="after"
+    matTooltipClass="tooltip-custom"
+    [routerLink]="['/view']"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon [inline]="true">library_books</mat-icon>
+  </button>
+
+  <button
+    *ngIf="auth.user$ | async as user; else login"
+    mat-stroked-button
+    class="active"
+    (click)="auth.signOut()"
+    matTooltip="Logout"
+    matTooltipPosition="after"
+    matTooltipClass="tooltip-custom"
+  >
+    <mat-icon [inline]="true">face</mat-icon>
+  </button>
+
+  <ng-template #login>
+    <button
+      mat-icon-button
+      (click)="auth.googleSignIn()"
+      matTooltip="Login"
+      matTooltipPosition="after"
+      matTooltipClass="tooltip-custom"
+    >
+      <mat-icon [inline]="true">login</mat-icon>
+    </button>
+  </ng-template>
+</div>
+<!-- <button mat-stroked-button color="warn" [disabled]="!true" (click)="auth.googleSignIn()">Login</button> -->

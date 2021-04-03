@@ -1,0 +1,36 @@
+.sidenav {
+  width: 70px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  box-shadow: var(--nav-shadow);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  background: var(--nav-bg);
+  padding-top: 10px;
+
+  button {
+    height: 70px;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-size: 30px;
+    filter: opacity(80%);
+    &:hover {
+      color: coral;
+      filter: none;
+      font-size: 36px;
+    }
+  }
+}
+
+.active {
+  color: coral !important;
+  filter: none;
+  font-size: 36px !important;
+}
+
+.tooltip-custom {
+  background: rgba(137, 43, 226, 0.63);
+}

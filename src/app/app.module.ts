@@ -1,18 +1,46 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MaterialModule } from './material.module';
+import { environment } from 'src/environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { UploadPageComponent } from './components/upload-page/upload-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { JsonViewerComponent } from './components/json-viewer/json-viewer.component';
+import { DropzoneDirective } from './components/upload-page/dropzone.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopNavComponent,
+    SidenavComponent,
+    UploadPageComponent,
+    HomePageComponent,
+    JsonViewerComponent,
+    DropzoneDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+
+    // firebase
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule, // storage
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
