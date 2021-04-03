@@ -1,3 +1,90 @@
 .home-page-container {
-  padding-left: 80px;
+  padding: 20px 20px 20px 90px;
+  --var-color-primary: #43ea23;
+  --var-color-background: #031321;
+  --var-color-text-hover: #020202;
+  --var-scale: 2.2;
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // background: var(--var-color-background);
+  background: var(--background-color-1);
+  color: var(--text-color);
+  font-family: consolas;
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 1em;
+    color: var(--text-color);
+    text-transform: uppercase;
+    /* letter-spacing: calc(4px * var(--var-scale)); */
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: calc(24px * var(--var-scale));
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  a:hover {
+    color: var(--var-color-text-hover);
+    background: var(--var-color-primary);
+    box-shadow: 0 0 calc(10px * var(--var-scale)) var(--var-color-primary),
+      0 0 calc(40px * var(--var-scale)) var(--var-color-primary),
+      0 0 calc(80px * var(--var-scale)) var(--var-color-primary);
+    transition-delay: 1s;
+  }
+  a span {
+    position: absolute;
+    display: block;
+  }
+  a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: calc(2px * var(--var-scale));
+    background: linear-gradient(90deg, transparent, var(--var-color-primary));
+  }
+  a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+  a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: calc(2px * var(--var-scale));
+    background: linear-gradient(270deg, transparent, var(--var-color-primary));
+  }
+  a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: calc(2px * var(--var-scale));
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--var-color-primary));
+  }
+  a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+  a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: calc(2px * var(--var-scale));
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--var-color-primary));
+  }
+  a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
 }
