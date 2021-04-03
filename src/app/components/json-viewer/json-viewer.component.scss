@@ -1,3 +1,22 @@
 .json-reader-container {
-  padding-left: 80px;
+  padding-left: 90px;
+  padding-top: 20px;
+
+  .file-list-card {
+    background-color: var(--card-bg);
+    margin-right: 20px;
+    .file-list-content {
+      display: flex;
+      flex-shrink: 0;
+      flex-flow: row wrap;
+      justify-content: left;
+
+      .item {
+        margin: 10px;
+        span {
+          color: blueviolet !important;
+        }
+      }
+    }
+  }
 }

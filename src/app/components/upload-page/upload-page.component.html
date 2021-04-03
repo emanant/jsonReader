@@ -1,5 +1,24 @@
 <div class="upload-page-container">
   <div
+    class="dropzone"
+    dropzone
+    (hovered)="toggleHover($event)"
+    (dropped)="onDrop($event)"
+    [class.hovering]="isHovering"
+  >
+    <h3>AngularFire Drop Zone</h3>
+    <p>Drag and Drop a File</p>
+  </div>
+
+  <h3>Uploads</h3>
+
+  <div *ngFor="let file of files">
+    <upload-task [file]="file"></upload-task>
+  </div>
+</div>
+
+<!-- <div class="upload-page-container">
+  <div
     class="dropzone col-md-8 col-11"
     dropzone
     (hovered)="toggleHover($event)"
@@ -27,9 +46,6 @@
   </div>
 
   <div *ngIf="snapshot | async as snap">
-    <!-- {{ snap.bypesTransferred | bytesToSize  }} of {{ snap.totalBytes | fileSize }} -->
-
-    <!-- {{ snap.bypesTransferred | fileSize }} of {{ snap.totalBytes | fileSize }} -->
 
     <div *ngIf="downloadURL | async as url">
       <h3>Results!</h3>
@@ -51,4 +67,4 @@
       Resume
     </button>
   </div>
-</div>
+</div> -->

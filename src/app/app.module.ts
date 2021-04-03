@@ -17,6 +17,7 @@ import { UploadPageComponent } from './components/upload-page/upload-page.compon
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { JsonViewerComponent } from './components/json-viewer/json-viewer.component';
 import { DropzoneDirective } from './components/upload-page/dropzone.directive';
+import { UploadTaskComponent } from './components/upload-page/upload-task/upload-task.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DropzoneDirective } from './components/upload-page/dropzone.directive';
     HomePageComponent,
     JsonViewerComponent,
     DropzoneDirective,
+    UploadTaskComponent,
   ],
   imports: [
     BrowserModule,
