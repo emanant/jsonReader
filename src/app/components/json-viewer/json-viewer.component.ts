@@ -18,6 +18,7 @@ export class JsonViewerComponent implements OnInit {
   storageRef = firebase.storage().ref();
 
   jsonData: any;
+  jsonString: string;
 
   constructor(private storage: AngularFireStorage) {}
 
@@ -95,8 +96,10 @@ export class JsonViewerComponent implements OnInit {
       xhr.responseType = 'blob';
       xhr.onload = (event) => {
         var blob = xhr.response;
-        blob.text().then((text) => {console.log(text);
-        this.jsonData = JSON.parse(text)});
+        blob.text().then((text) => {
+          console.log(text);
+          this.jsonData = JSON.parse(text);
+        });
       };
       xhr.open('GET', url);
       xhr.send();
@@ -107,5 +110,6 @@ export class JsonViewerComponent implements OnInit {
 
   displayLocalJson(): void {
     this.jsonData = jsonData;
+    this.jsonString = JSON.stringify(jsonData);
   }
 }

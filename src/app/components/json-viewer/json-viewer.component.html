@@ -31,7 +31,13 @@
     </mat-card-content>
   </mat-card>
   <mat-divider class="m-4"></mat-divider>
-  <mat-card class="card" *ngIf="!!jsonData">
-    <ngx-json-viewer [json]="jsonData" [depth]="3"></ngx-json-viewer>
-  </mat-card>
+  <div *ngIf="!!jsonData">
+    <!-- <mat-card class="card col-md-5 col-sm m-1">
+      <div ngxAceEditor [(text)]="jsonString"></div>
+    </mat-card> -->
+    <!-- <mat-card class="card col-md-5 col-sm m-1"> -->
+    <mat-card class="card">
+      <ngx-json-viewer [json]="jsonData" [depth]="3"></ngx-json-viewer>
+    </mat-card>
+  </div>
 </div>

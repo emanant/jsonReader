@@ -19,6 +19,7 @@ import { JsonViewerComponent } from './components/json-viewer/json-viewer.compon
 import { DropzoneDirective } from './components/upload-page/dropzone.directive';
 import { UploadTaskComponent } from './components/upload-page/upload-task/upload-task.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
+import { AceEditorModule } from '@postfinance/ngx-ace-editor-wrapper';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     AngularFireStorageModule, // storage
 
     NgxJsonViewerModule,
+    AceEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
