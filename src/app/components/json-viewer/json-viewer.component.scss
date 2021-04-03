@@ -1,10 +1,14 @@
 .json-reader-container {
-  padding-left: 90px;
-  padding-top: 20px;
+  // padding-left: 90px;
+  // padding-top: 20px;
+  padding: 20px 20px 20px 90px;
+
+  .card {
+    background-color: var(--card-bg);
+    box-shadow: var(--toc-shadow);
+  }
 
   .file-list-card {
-    background-color: var(--card-bg);
-    margin-right: 20px;
     .file-list-content {
       display: flex;
       flex-shrink: 0;

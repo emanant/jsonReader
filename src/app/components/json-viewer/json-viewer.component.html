@@ -1,8 +1,21 @@
 <div class="json-reader-container">
-  <mat-card class="file-list-card">
+  <mat-card class="file-list-card card">
     <mat-card-header>
       <!-- <div mat-card-avatar class="example-header-image"></div> -->
-      <mat-card-title>Json Files available in storage</mat-card-title>
+      <mat-card-title>
+        Json Files available in storage
+        <button
+          mat-flat-button
+          color="warn"
+          class="ml-4"
+          matTooltip="View local json file"
+          matTooltipPosition="after"
+          matTooltipClass="tooltip-custom"
+          (click)="displayLocalJson()"
+        >
+          Dummy json
+        </button>
+      </mat-card-title>
       <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
     </mat-card-header>
     <mat-card-content class="file-list-content">
@@ -16,5 +29,9 @@
         {{ file.split("_")[1].split(".")[0] }}
       </button>
     </mat-card-content>
+  </mat-card>
+  <mat-divider class="m-4"></mat-divider>
+  <mat-card class="card" *ngIf="!!jsonData">
+    <ngx-json-viewer [json]="jsonData" [depth]="3"></ngx-json-viewer>
   </mat-card>
 </div>

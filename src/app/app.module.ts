@@ -18,6 +18,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { JsonViewerComponent } from './components/json-viewer/json-viewer.component';
 import { DropzoneDirective } from './components/upload-page/dropzone.directive';
 import { UploadTaskComponent } from './components/upload-page/upload-task/upload-task.component';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,8 @@ import { UploadTaskComponent } from './components/upload-page/upload-task/upload
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
+
+    NgxJsonViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

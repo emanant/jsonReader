@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import { AngularFireStorage } from '@angular/fire/storage';
+import jsonData from 'src/assets/content.json';
 
 @Component({
   selector: 'app-json-viewer',
@@ -15,6 +16,8 @@ export class JsonViewerComponent implements OnInit {
   selectedFileRef: firebase.storage.Reference;
   selectedFile: any;
   storageRef = firebase.storage().ref();
+
+  jsonData: any;
 
   constructor(private storage: AngularFireStorage) {}
 
@@ -92,12 +95,17 @@ export class JsonViewerComponent implements OnInit {
       xhr.responseType = 'blob';
       xhr.onload = (event) => {
         var blob = xhr.response;
-        console.log('response', blob);
+        blob.text().then((text) => {console.log(text);
+        this.jsonData = JSON.parse(text)});
       };
       xhr.open('GET', url);
       xhr.send();
     });
 
     console.log('selected', this.selectedFileRef.getDownloadURL);
+  }
+
+  displayLocalJson(): void {
+    this.jsonData = jsonData;
   }
 }
