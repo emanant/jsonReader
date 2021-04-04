@@ -33,22 +33,38 @@ export class JsonViewerComponent implements OnInit {
   minimapPosition = MiniMapPosition;
   isGraphFullscreen: boolean = false;
 
-  nodes: [
+  links = [
     {
-      id: 'root';
-      label: 'Root Node';
+      id: 'a',
+      source: '1',
+      target: '2',
     },
     {
-      id: '1';
-      label: 'Node 1';
-    }
+      id: 'b',
+      source: '1',
+      target: '3',
+    },
   ];
-  nodeLinks: [
+  nodes = [
     {
-      id: 'a';
-      source: 'root';
-      target: '1';
-    }
+      id: '1',
+      label: 'Node A',
+    },
+    {
+      id: '2',
+      label: 'Node B',
+    },
+    {
+      id: '3',
+      label: 'Node C',
+    },
+  ];
+  clusters = [
+    {
+      id: 'cluster0',
+      label: 'Cluster node',
+      childNodeIds: ['2', '3'],
+    },
   ];
 
   constructor(private storage: AngularFireStorage) {}
