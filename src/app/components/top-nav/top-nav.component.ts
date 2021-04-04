@@ -14,10 +14,11 @@ import { ThemeService } from '../../theme/theme.service';
 })
 export class TopNavComponent {
   @Input() isDarkTheme: boolean = false;
+  private timer;
+
   constructor(public themeService: ThemeService) {}
 
   toggleTheme(): void {
-    console.log('hi', !this.isDarkTheme);
     this.themeService.setDarkTheme(!this.isDarkTheme);
   }
 
@@ -33,16 +34,26 @@ export class TopNavComponent {
     this.currYOffset = window.pageYOffset;
 
     this.hideNavBar =
-      this.prevYOffset < this.currYOffset &&
+      this.prevYOffset <= this.currYOffset &&
       this.currYOffset > 2 * this.topnav.nativeElement.offsetHeight;
     console.log(this.hideNavBar);
 
     this.prevYOffset = this.currYOffset;
+    window.clearTimeout(this.timer);
+    this.onMouseOut();
   }
 
   @HostListener('mouseover', ['$event'])
-  onEvent() {
+  onMouseOver() {
     this.prevYOffset = window.pageYOffset;
     this.checkScroll();
+  }
+
+  @HostListener('onmouseout', ['$event'])
+  onMouseOut() {
+    this.timer = setTimeout(() => {
+      this.prevYOffset = window.pageYOffset;
+      this.checkScroll();
+    }, 3000);
   }
 }

@@ -20,6 +20,7 @@ import { DropzoneDirective } from './components/upload-page/dropzone.directive';
 import { UploadTaskComponent } from './components/upload-page/upload-task/upload-task.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { AceEditorModule } from '@postfinance/ngx-ace-editor-wrapper';
+import { NgxGraphModule } from '@swimlane/ngx-graph';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AceEditorModule } from '@postfinance/ngx-ace-editor-wrapper';
 
     NgxJsonViewerModule,
     AceEditorModule,
+    NgxGraphModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

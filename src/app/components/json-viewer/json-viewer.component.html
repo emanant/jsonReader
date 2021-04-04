@@ -30,14 +30,168 @@
       </button>
     </mat-card-content>
   </mat-card>
-  <mat-divider class="m-4"></mat-divider>
+
+  <mat-divider class="my-4"></mat-divider>
+
   <div *ngIf="!!jsonData">
-    <!-- <mat-card class="card col-md-5 col-sm m-1">
-      <div ngxAceEditor [(text)]="jsonString"></div>
-    </mat-card> -->
-    <!-- <mat-card class="card col-md-5 col-sm m-1"> -->
-    <mat-card class="card">
-      <ngx-json-viewer [json]="jsonData" [depth]="3"></ngx-json-viewer>
+    <mat-card class="card mb-3">
+      <div class="graph-container">
+        <div class="control-btns">
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="update$.next(true)"
+            matTooltip="Update"
+            matTooltipClass="tooltip-custom"
+          >
+            <span class="material-icons"> restart_alt </span>
+          </button>
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="center$.next(true)"
+            matTooltip="Center"
+            matTooltipClass="tooltip-custom"
+          >
+            <!-- <span class="material-icons"> format_align_center </span> -->
+            <span class="material-icons"> filter_center_focus </span>
+          </button>
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="zoomToFit$.next(true)"
+            matTooltip="Zoom to Fit"
+            matTooltipClass="tooltip-custom"
+          >
+            <span class="material-icons"> fit_screen </span>
+          </button>
+        </div>
+        <button
+          class="zoom-btns"
+          *ngIf="isGraphFullscreen; else graphFullscreen"
+          mat-icon-button
+          color="primary"
+          (click)="exitGrapgFullScreen($event)"
+        >
+          <span class="material-icons"> fullscreen_exit </span>
+        </button>
+        <ng-template #graphFullscreen>
+          <button
+            class="zoom-btns"
+            mat-icon-button
+            color="primary"
+            (click)="setGrapgFullScreen($event)"
+          >
+            <span class="material-icons"> fullscreen </span>
+          </button>
+        </ng-template>
+        <ngx-graph
+          layout="dagreCluster"
+          [update$]="update$"
+          [center$]="center$"
+          [zoomToFit$]="zoomToFit$"
+          [showMiniMap]="true"
+          [miniMapPosition]="minimapPosition.UpperLeft"
+          [links]="[
+            {
+              id: 'a',
+              source: '1',
+              target: '2'
+            },
+            {
+              id: 'b',
+              source: '1',
+              target: '3'
+            },
+            {
+              id: 'c',
+              source: '3',
+              target: '4'
+            },
+            {
+              id: 'd',
+              source: '3',
+              target: '5'
+            },
+            {
+              id: 'e',
+              source: '4',
+              target: '5'
+            },
+            {
+              id: 'f',
+              source: '2',
+              target: '6'
+            }
+          ]"
+          [nodes]="[
+            {
+              id: '1',
+              label: 'Node A'
+            },
+            {
+              id: '2',
+              label: 'Node B'
+            },
+            {
+              id: '3',
+              label: 'Node C'
+            },
+            {
+              id: '4',
+              label: 'Node D'
+            },
+            {
+              id: '5',
+              label: 'Node E'
+            },
+            {
+              id: '6',
+              label: 'Node F'
+            }
+          ]"
+          [clusters]="[
+            {
+              id: 'cluster0',
+              label: 'Cluster node',
+              childNodeIds: ['2', '3']
+            }
+          ]"
+        ></ngx-graph>
+      </div>
     </mat-card>
+    <mat-accordion class="card">
+      <mat-expansion-panel
+        (opened)="jsonTreePanelOpenState = true"
+        (closed)="jsonTreePanelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Tree View </mat-panel-title>
+          <mat-panel-description>
+            <button
+              *ngIf="jsonTreePanelOpenState"
+              mat-icon-button
+              color="warn"
+              (click)="expandAllChilds($event)"
+            >
+              <span class="material-icons">unfold_more</span>
+            </button>
+            <button
+              *ngIf="jsonTreePanelOpenState"
+              mat-icon-button
+              color="warn"
+              (click)="CollapseAllChilds($event)"
+            >
+              <span class="material-icons">unfold_less</span>
+            </button>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ngx-json-viewer
+          [json]="jsonData"
+          [depth]="-1"
+          [expanded]="jsonTreeExpanded"
+        ></ngx-json-viewer>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
 </div>

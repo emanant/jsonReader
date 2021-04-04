@@ -1,0 +1,11 @@
+{
+  "terminal.integrated.shell.windows": "C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
+  "terminal.integrated.fontFamily": "CaskaydiaCove NF",
+  "editor.fontLigatures": true,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.bracketSpacing": true
+}

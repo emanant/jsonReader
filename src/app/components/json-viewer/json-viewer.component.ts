@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { MiniMapPosition } from '@swimlane/ngx-graph';
+import { Subject } from 'rxjs';
+
 import jsonData from 'src/assets/content.json';
 
 @Component({
@@ -17,8 +20,36 @@ export class JsonViewerComponent implements OnInit {
   selectedFile: any;
   storageRef = firebase.storage().ref();
 
-  jsonData: any;
+  jsonData: any = jsonData;
   jsonString: string;
+
+  jsonTreePanelOpenState: boolean;
+  jsonTreeExpanded: boolean = false;
+
+  jsonGraphPanelOpenState: boolean;
+  update$: Subject<boolean> = new Subject();
+  center$: Subject<boolean> = new Subject();
+  zoomToFit$: Subject<boolean> = new Subject();
+  minimapPosition = MiniMapPosition;
+  isGraphFullscreen: boolean = false;
+
+  nodes: [
+    {
+      id: 'root';
+      label: 'Root Node';
+    },
+    {
+      id: '1';
+      label: 'Node 1';
+    }
+  ];
+  nodeLinks: [
+    {
+      id: 'a';
+      source: 'root';
+      target: '1';
+    }
+  ];
 
   constructor(private storage: AngularFireStorage) {}
 
@@ -35,19 +66,7 @@ export class JsonViewerComponent implements OnInit {
     var listRef = this.storageRef.child('test/');
     const ref = this.storage.ref('test/');
     console.log('REF:', ref);
-    // Find all the prefixes and items.
-    // return listRef
-    //   .listAll()
-    //   .then((res) => {
-    //     res.items.forEach((itemRef) => {
-    //       // All the items under listRef.
-    //       console.log('file', itemRef);
-    //       this.files.push(itemRef.name);
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     // Uh-oh, an error occurred!
-    //   });
+
     return ref.listAll().forEach((result) =>
       result.items.forEach((item) => {
         this.files.push(item.fullPath);
@@ -61,10 +80,6 @@ export class JsonViewerComponent implements OnInit {
     // this.files
     this.fileRefs
       .filter((fileRef) => {
-        // console.log(
-        //   file,
-        //   file.substring(file.lastIndexOf('.') + 1, file.length)
-        // );
         return (
           // file.substring(file.lastIndexOf('.') + 1, file.length) === 'json'
           fileRef.fullPath.substring(
@@ -97,7 +112,6 @@ export class JsonViewerComponent implements OnInit {
       xhr.onload = (event) => {
         var blob = xhr.response;
         blob.text().then((text) => {
-          console.log(text);
           this.jsonData = JSON.parse(text);
         });
       };
@@ -112,4 +126,20 @@ export class JsonViewerComponent implements OnInit {
     this.jsonData = jsonData;
     this.jsonString = JSON.stringify(jsonData);
   }
+
+  expandAllChilds(event): void {
+    this.jsonTreeExpanded = true;
+    // this.jsonData = Object.assign({}, this.jsonData);
+    this.jsonData = this.jsonData;
+    event.stopPropagation();
+  }
+  CollapseAllChilds(event): void {
+    this.jsonTreeExpanded = false;
+    // this.jsonData = Object.assign({}, this.jsonData);
+    this.jsonData = this.jsonData;
+    event.stopPropagation();
+  }
+
+  exitGrapgFullScreen(event) {}
+  setGrapgFullScreen(event) {}
 }

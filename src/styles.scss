@@ -119,3 +119,20 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+::-webkit-scrollbar {
+  // background: var(--background-color-1);
+  box-shadow: var(--toc-shadow);
+  width: 10px;
+}
+::-webkit-resizer,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  background: var(--code-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}

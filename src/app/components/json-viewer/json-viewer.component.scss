@@ -1,11 +1,10 @@
 .json-reader-container {
-  // padding-left: 90px;
-  // padding-top: 20px;
   padding: 20px 20px 20px 90px;
 
   .card {
     background-color: var(--card-bg);
     box-shadow: var(--toc-shadow);
+    width: 100%;
   }
 
   .file-list-card {
@@ -23,15 +22,40 @@
       }
     }
   }
-}
-
-// .ngx-json-viewer[_ngcontent-cwm-c111]
-//   .segment[_ngcontent-cwm-c111]
-//   .segment-main[_ngcontent-cwm-c111]
-//   .segment-key[_ngcontent-cwm-c111] {
-//   color: var(--text-color) impor !important;
-// }
-
-.segment-key {
-  color: var(--text-color) !important;
+  .card {
+    .mat-expansion-panel {
+      background: var(--card-bg);
+    }
+    .mat-expansion-panel-header-description {
+      justify-content: flex-end;
+      align-items: center;
+      // background-color: transparent;
+    }
+    .mat-expansion-panel-header-title {
+      align-items: center;
+      // background-color: transparent;
+    }
+    .mat-expansion-panel-content {
+      background: var(--code-bg);
+    }
+  }
+  .graph-container {
+    padding-left: 0;
+    padding-right: 0;
+    height: 600px;
+    width: 100%;
+    min-width: 500px;
+    .control-btns {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+    }
+    .zoom-btns {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 9;
+    }
+  }
 }
