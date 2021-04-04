@@ -6,7 +6,7 @@
         Json Files available in storage
         <button
           mat-flat-button
-          color="warn"
+          color="accent"
           class="ml-4"
           matTooltip="View local json file"
           matTooltipPosition="after"
@@ -35,43 +35,62 @@
 
   <div *ngIf="!!jsonData">
     <mat-card class="card mb-3">
-      <div class="graph-container">
+      <div class="graph-container" id="graph-container">
         <div class="control-btns">
           <button
             mat-icon-button
-            color="primary"
+            color="accent"
             (click)="update$.next(true)"
             matTooltip="Update"
             matTooltipClass="tooltip-custom"
+            [matTooltipPosition]="isGraphFullscreen ? 'before' : 'below'"
           >
             <span class="material-icons"> restart_alt </span>
           </button>
           <button
             mat-icon-button
-            color="primary"
+            color="accent"
             (click)="center$.next(true)"
             matTooltip="Center"
             matTooltipClass="tooltip-custom"
+            [matTooltipPosition]="isGraphFullscreen ? 'before' : 'below'"
           >
             <!-- <span class="material-icons"> format_align_center </span> -->
             <span class="material-icons"> filter_center_focus </span>
           </button>
           <button
             mat-icon-button
-            color="primary"
+            color="accent"
             (click)="zoomToFit$.next(true)"
             matTooltip="Zoom to Fit"
             matTooltipClass="tooltip-custom"
+            [matTooltipPosition]="isGraphFullscreen ? 'before' : 'below'"
           >
             <span class="material-icons"> fit_screen </span>
           </button>
+        </div>
+        <div class="control-togglers">
+          <mat-checkbox
+            class="example-margin"
+            [checked]="autoCenter"
+            (change)="autoCenter = !autoCenter"
+          >
+            Center on update
+          </mat-checkbox>
+          <mat-checkbox
+            class="example-margin"
+            [checked]="autoZoom"
+            (change)="autoZoom = !autoZoom"
+          >
+            Zoom on update
+          </mat-checkbox>
         </div>
         <button
           class="zoom-btns"
           *ngIf="isGraphFullscreen; else graphFullscreen"
           mat-icon-button
-          color="primary"
-          (click)="exitGrapgFullScreen($event)"
+          color="accent"
+          (click)="exitGrapgFullScreen()"
         >
           <span class="material-icons"> fullscreen_exit </span>
         </button>
@@ -79,8 +98,8 @@
           <button
             class="zoom-btns"
             mat-icon-button
-            color="primary"
-            (click)="setGrapgFullScreen($event)"
+            color="accent"
+            (click)="setGrapgFullScreen()"
           >
             <span class="material-icons"> fullscreen </span>
           </button>
@@ -94,8 +113,62 @@
           [miniMapPosition]="minimapPosition.UpperLeft"
           [links]="links"
           [nodes]="nodes"
-          [clusters]="clusters"
-        ></ngx-graph>
+          [miniMapMaxHeight]="500"
+          [autoZoom]="autoZoom"
+          [autoCenter]="autoCenter"
+        >
+          <!-- <ng-template #defsTemplate>
+            <svg:marker
+              id="arrow"
+              viewBox="0 -5 10 10"
+              refX="8"
+              refY="0"
+              markerWidth="4"
+              markerHeight="4"
+              orient="auto"
+            >
+              <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+            </svg:marker>
+          </ng-template> -->
+
+          <ng-template #nodeTemplate let-node>
+            <svg:g class="node">
+              <svg:rect
+                [attr.width]="node.dimension.width"
+                [attr.height]="node.dimension.height"
+                [attr.fill]="node.data.color"
+              />
+              <svg:text
+                alignment-baseline="central"
+                [attr.x]="10"
+                [attr.y]="node.dimension.height / 2"
+              >
+                {{ node.label }}
+              </svg:text>
+            </svg:g>
+          </ng-template>
+
+          <ng-template #linkTemplate let-link>
+            <svg:g class="edge">
+              <svg:path
+                class="line"
+                stroke-width="2"
+                marker-end="url(#arrow)"
+              ></svg:path>
+              <svg:text class="edge-label" text-anchor="middle">
+                <textPath
+                  class="text-path"
+                  [attr.href]="'#' + link.id"
+                  [style.dominant-baseline]="link.dominantBaseline"
+                  startOffset="50%"
+                >
+                  {{ link.label }}
+                </textPath>
+              </svg:text>
+            </svg:g>
+          </ng-template>
+        </ngx-graph>
+        <!-- [clusters]="clusters" -->
       </div>
     </mat-card>
     <mat-accordion class="card">

@@ -50,6 +50,7 @@
       top: 10px;
       right: 10px;
       display: flex;
+      z-index: 9;
     }
     .zoom-btns {
       position: absolute;
@@ -57,5 +58,30 @@
       right: 10px;
       z-index: 9;
     }
+    .control-togglers {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      z-index: 9;
+    }
+    .edge-label {
+      fill: var(--text-color);
+    }
+  }
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh !important;
+  width: 100vw !important;
+  z-index: 5;
+  background-color: var(--card-bg);
+  .control-btns {
+    top: 70px !important;
+    flex-direction: column;
   }
 }

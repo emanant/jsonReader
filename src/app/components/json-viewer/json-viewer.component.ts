@@ -4,6 +4,7 @@ import 'firebase/storage';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { MiniMapPosition } from '@swimlane/ngx-graph';
 import { Subject } from 'rxjs';
+import { Edge, Node, ClusterNode, Layout } from '@swimlane/ngx-graph';
 
 import jsonData from 'src/assets/content.json';
 
@@ -20,7 +21,7 @@ export class JsonViewerComponent implements OnInit {
   selectedFile: any;
   storageRef = firebase.storage().ref();
 
-  jsonData: any = jsonData;
+  jsonData: any;
   jsonString: string;
 
   jsonTreePanelOpenState: boolean;
@@ -31,35 +32,13 @@ export class JsonViewerComponent implements OnInit {
   center$: Subject<boolean> = new Subject();
   zoomToFit$: Subject<boolean> = new Subject();
   minimapPosition = MiniMapPosition;
+  autoZoom: boolean = false;
+  autoCenter: boolean = false;
   isGraphFullscreen: boolean = false;
 
-  links = [
-    {
-      id: 'a',
-      source: '1',
-      target: '2',
-    },
-    {
-      id: 'b',
-      source: '1',
-      target: '3',
-    },
-  ];
-  nodes = [
-    {
-      id: '1',
-      label: 'Node A',
-    },
-    {
-      id: '2',
-      label: 'Node B',
-    },
-    {
-      id: '3',
-      label: 'Node C',
-    },
-  ];
-  clusters = [
+  links: Edge[] = [];
+  nodes: Node[] = [];
+  clusters: ClusterNode[] = [
     {
       id: 'cluster0',
       label: 'Cluster node',
@@ -72,6 +51,7 @@ export class JsonViewerComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     await this.listAll();
     this.listJson();
+    this.displayLocalJson();
   }
 
   async listAll(): Promise<void> {
@@ -129,18 +109,27 @@ export class JsonViewerComponent implements OnInit {
         var blob = xhr.response;
         blob.text().then((text) => {
           this.jsonData = JSON.parse(text);
+
+          this.links = [];
+          this.nodes = [];
+          this.clusters = [];
+          this.updateGraphMetaData(this.jsonData, '0', 0);
+
+          console.log(this.nodes);
+          console.log(this.links);
         });
       };
       xhr.open('GET', url);
       xhr.send();
     });
 
-    console.log('selected', this.selectedFileRef.getDownloadURL);
+    // console.log('selected', this.selectedFileRef.getDownloadURL);
   }
 
   displayLocalJson(): void {
     this.jsonData = jsonData;
     this.jsonString = JSON.stringify(jsonData);
+    this.updateGraphMetaData(this.jsonData, '0', 0);
   }
 
   expandAllChilds(event): void {
@@ -156,6 +145,61 @@ export class JsonViewerComponent implements OnInit {
     event.stopPropagation();
   }
 
-  exitGrapgFullScreen(event) {}
-  setGrapgFullScreen(event) {}
+  exitGrapgFullScreen() {
+    document.getElementById('graph-container').classList.remove('fullscreen');
+    this.isGraphFullscreen = false;
+    this.update$.next(true);
+  }
+  setGrapgFullScreen() {
+    document.getElementById('graph-container').classList.add('fullscreen');
+    this.isGraphFullscreen = true;
+    this.update$.next(true);
+  }
+
+  updateGraphMetaData(
+    currNode: any,
+    siblingNum: string,
+    depth: number,
+    parentId?: string,
+    keyValueForCurrNode?: string
+  ) {
+    let node = <Node>{};
+    // let nodeId: string = currNode.id?.toString() || `${parentId}_${siblingNum}`;
+    node['id'] =
+      currNode.id?.toString() ||
+      `${parentId ? parentId : 'Root'}_${siblingNum}`;
+    node['label'] = node['id'].toString();
+    this.nodes.push(node);
+
+    if (parentId) {
+      let link = <Edge>{};
+      link['id'] = `${parentId}>${node['id']}`;
+      link['source'] = parentId;
+      link['target'] = node['id'];
+      link['label'] = keyValueForCurrNode
+        ? keyValueForCurrNode
+        : depth.toString();
+      this.links.push(link);
+    }
+
+    let numChilds = 0;
+
+    for (var key in currNode) {
+      if (Array.isArray(currNode[key])) {
+        for (var k in currNode[key]) {
+          // let tmp = node['id'].split('_');
+          this.updateGraphMetaData(
+            currNode[key][k],
+            (++numChilds).toString(),
+            depth + 1,
+            // tmp[tmp.length - 1]
+            node['id'],
+            key
+          );
+          console.log(this.nodes);
+          console.log(this.links);
+        }
+      }
+    }
+  }
 }

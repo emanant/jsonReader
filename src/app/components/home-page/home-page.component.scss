@@ -24,9 +24,10 @@
     /* letter-spacing: calc(4px * var(--var-scale)); */
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: calc(24px * var(--var-scale));
+    font-size: calc(2em * var(--var-scale));
     overflow: hidden;
     transition: 0.2s;
+    line-height: normal;
   }
   a:hover {
     color: var(--var-color-text-hover);

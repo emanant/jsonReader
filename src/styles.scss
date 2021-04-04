@@ -16,12 +16,12 @@
 
 // Define a dark theme
 $light-primary: mat-palette($mat-light-blue);
-$light-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-accent: mat-palette($mat-light-blue, A200, A100, A400);
 $light-warn: mat-palette($mat-deep-orange);
 
 // Define a dark theme
 $dark-primary: mat-palette($mat-blue-grey);
-$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-accent: mat-palette($mat-amber, A700, A100, A400);
 $dark-warn: mat-palette($mat-deep-orange);
 
 // $jsonReader-warn: mat-palette($mat-red);

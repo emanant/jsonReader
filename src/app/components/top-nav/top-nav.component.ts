@@ -34,13 +34,13 @@ export class TopNavComponent {
     this.currYOffset = window.pageYOffset;
 
     this.hideNavBar =
-      this.prevYOffset <= this.currYOffset &&
+      this.prevYOffset < this.currYOffset &&
       this.currYOffset > 2 * this.topnav.nativeElement.offsetHeight;
     console.log(this.hideNavBar);
 
     this.prevYOffset = this.currYOffset;
-    window.clearTimeout(this.timer);
-    this.onMouseOut();
+    // window.clearTimeout(this.timer);
+    // this.onMouseOut();
   }
 
   @HostListener('mouseover', ['$event'])
@@ -49,11 +49,11 @@ export class TopNavComponent {
     this.checkScroll();
   }
 
-  @HostListener('onmouseout', ['$event'])
-  onMouseOut() {
-    this.timer = setTimeout(() => {
-      this.prevYOffset = window.pageYOffset;
-      this.checkScroll();
-    }, 3000);
-  }
+  // @HostListener('onmouseout', ['$event'])
+  // onMouseOut() {
+  //   this.timer = setTimeout(() => {
+  //     this.prevYOffset = window.pageYOffset;
+  //     this.checkScroll();
+  //   }, 3000);
+  // }
 }
