@@ -1,0 +1,2681 @@
+{
+  "id": "B",
+  "fileType": "content",
+  "type": "UnguardedNodeServer",
+  "description": "Root Node",
+  "tags": ["AllItems"],
+  "children": [
+    {
+      "id": "B_1",
+      "type": "DNWrapper",
+      "guard": "(!(${TutorialComplete}))",
+      "description": "Instruction wrapper",
+      "children": [
+        {
+          "id": "B_1_1",
+          "type": "DataNode",
+          "data": {
+            "tutorial": true,
+            "viewID": "com.scilearn.ArtWalk.Introduction",
+            "trialID": 101110,
+            "level": 1,
+            "picNum": 1,
+            "sentNum": 1,
+            "sentType": 10,
+            "sentTypeDesc": "Commonly misused verbs ",
+            "stims": ["The broccoli cart"],
+            "answer": "may fall over.",
+            "foil1": "has fallen over.",
+            "foil2": "fell over first.",
+            "foil3": "felled the broccoli.",
+            "sentenceLength": 31,
+            "totalSegments": 2,
+            "segmentNum": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "B_2",
+      "type": "UnguardedNodeServer",
+      "guard": "${statement1Int} || ${statement2Int} || ${statement3Int} || ${statement4Int} || ${statement5Int} || ${statement6Int} || ${statement7Int} || ${statement8Int} || ${statement9Int} || ${statement10Int} || ${statement11Int} || ${statement12Int} || ${statement13Int} || ${statement14Int} || ${statement15Int}",
+      "description": "Intervention node",
+      "children": [
+        {
+          "id": "B_2_1",
+          "type": "DNWrapper",
+          "guard": "(${Statement1Int})",
+          "description": "Statement type 1 intervention",
+          "children": [
+            {
+              "id": "B_2_1_1",
+              "description": "Statement type 1 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_2",
+          "type": "DNWrapper",
+          "guard": "(${Statement2Int})",
+          "description": "Statement type 2 intervention",
+          "children": [
+            {
+              "id": "B_2_2_1",
+              "description": "Statement type 2 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_3",
+          "type": "DNWrapper",
+          "guard": "(${Statement3Int})",
+          "description": "Statement type 3 intervention",
+          "children": [
+            {
+              "id": "B_2_3_1",
+              "description": "Statement type 3 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_4",
+          "type": "DNWrapper",
+          "guard": "(${Statement4Int})",
+          "description": "Statement type 4 intervention",
+          "children": [
+            {
+              "id": "B_2_4_1",
+              "description": "Statement type 4 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_5",
+          "type": "DNWrapper",
+          "guard": "(${Statement5Int})",
+          "description": "Statement type 5 intervention",
+          "children": [
+            {
+              "id": "B_2_5_1",
+              "description": "Statement type 5 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_6",
+          "type": "DNWrapper",
+          "guard": "(${Statement6Int})",
+          "description": "Statement type 6 intervention",
+          "children": [
+            {
+              "id": "B_2_6_1",
+              "description": "Statement type 6 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_7",
+          "type": "DNWrapper",
+          "guard": "(${Statement7Int})",
+          "description": "Statement type 7 intervention",
+          "children": [
+            {
+              "id": "B_2_7_1",
+              "description": "Statement type 7 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_8",
+          "type": "DNWrapper",
+          "guard": "(${Statement8Int})",
+          "description": "Statement type 8 intervention",
+          "children": [
+            {
+              "id": "B_2_8_1",
+              "description": "Statement type 8 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_9",
+          "type": "DNWrapper",
+          "guard": "(${Statement9Int})",
+          "description": "Statement type 9 intervention",
+          "children": [
+            {
+              "id": "B_2_9_1",
+              "description": "Statement type 9 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_10",
+          "type": "DNWrapper",
+          "guard": "(${Statement10Int})",
+          "description": "Statement type 10 intervention",
+          "children": [
+            {
+              "id": "B_2_10_1",
+              "description": "Statement type 10 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_11",
+          "type": "DNWrapper",
+          "guard": "(${Statement11Int})",
+          "description": "Statement type 11 intervention",
+          "children": [
+            {
+              "id": "B_2_11_1",
+              "description": "Statement type 11 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_12",
+          "type": "DNWrapper",
+          "guard": "(${Statement12Int})",
+          "description": "Statement type 12 intervention",
+          "children": [
+            {
+              "id": "B_2_12_1",
+              "description": "Statement type 12 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_13",
+          "type": "DNWrapper",
+          "guard": "(${Statement13Int})",
+          "description": "Statement type 13 intervention",
+          "children": [
+            {
+              "id": "B_2_13_1",
+              "description": "Statement type 13 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_14",
+          "type": "DNWrapper",
+          "guard": "(${Statement14Int})",
+          "description": "Statement type 14 intervention",
+          "children": [
+            {
+              "id": "B_2_14_1",
+              "description": "Statement type 14 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "B_2_15",
+          "type": "DNWrapper",
+          "guard": "(${Statement15Int})",
+          "description": "Statement type 15 intervention",
+          "children": [
+            {
+              "id": "B_2_15_1",
+              "description": "Statement type 15 intervention node",
+              "type": "DataNode",
+              "data": {
+                "viewID": "com.scilearn.ArtWalk.InterventionMechanic"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B_3",
+      "type": "InternalNodeSequencer",
+      "description": "TODNS root node",
+      "guard": "(!${GamePlayComplete})",
+      "onPassChangeBy": [
+        {
+          "fromIndex": 0,
+          "changeBy": 1
+        }
+      ],
+      "onFailChangeBy": [
+        {
+          "fromIndex": 0,
+          "changeBy": 0
+        }
+      ],
+      "children": [
+        {
+          "id": "B_3_1",
+          "type": "TODNSLevel",
+          "description": "Level 1",
+          "children": [
+            {
+              "id": "B_3_1_1",
+              "description": "L1ST10P1S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 10,
+                "picNum": 1
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_1_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_1_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 101110,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Commonly misused verbs ",
+                        "stims": ["The broccoli cart"],
+                        "answer": "may fall over.",
+                        "foil1": "has fallen over.",
+                        "foil2": "fell over first.",
+                        "foil3": "felled the broccoli.",
+                        "sentenceLength": 31,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_2",
+              "description": "L1ST6P1S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 6,
+                "picNum": 1
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_2_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_2_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 101206,
+                        "sentNum": 2,
+                        "sentTypeDesc": "Appositive phrase ",
+                        "stims": ["The cauliflower cart, the one"],
+                        "answer": "on its side, is almost empty.",
+                        "foil1": "upside down, is almost empty.",
+                        "foil2": "leaving the store, is carrying a bag.",
+                        "foil3": "cart is almost empty.",
+                        "sentenceLength": 58,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_3",
+              "description": "L1ST2P1S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 2,
+                "picNum": 1
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_3_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_3_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 101302,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Simple negation ",
+                        "stims": ["The shopper does"],
+                        "answer": "not see the accident.",
+                        "foil1": "scene of the accident.",
+                        "foil2": "not seen the accident.",
+                        "foil3": "sees the accident.",
+                        "sentenceLength": 37,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_4",
+              "description": "L1ST1P1S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 1,
+                "picNum": 1
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_4_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_4_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 101401,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Attributive/stative: SV ",
+                        "stims": ["The shopper"],
+                        "answer": "is unaware.",
+                        "foil1": "are unaware.",
+                        "foil2": "is falling.",
+                        "foil3": "is hidden.",
+                        "sentenceLength": 22,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_5",
+              "description": "L1ST14P1S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 14,
+                "picNum": 1
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_5_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_5_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 101514,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Complex Sentences",
+                        "stims": ["The shopper cannot see over his bag;"],
+                        "answer": "thus, he does not see the falling broccoli cart.",
+                        "foil1": "how the accident happened.",
+                        "foil2": "and he sees the broccoli falling out of the cart in front of him.",
+                        "foil3": "therefore, he does not hear the accident that is happening.",
+                        "sentenceLength": 84,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_6",
+              "description": "L1ST11P2S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 11,
+                "picNum": 2
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_6_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_6_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 102111,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Simple Modifier ",
+                        "stims": ["The goat"],
+                        "answer": "sells fruit energetically.",
+                        "foil1": "sleeps on a bench.",
+                        "foil2": "calls out shyly.",
+                        "foil3": "with the fruit and the sign.",
+                        "sentenceLength": 34,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_7",
+              "description": "L1ST2P2S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 2,
+                "picNum": 2
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_7_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_7_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 102202,
+                        "sentNum": 2,
+                        "sentTypeDesc": " Simple negation ",
+                        "stims": ["The dog in the bright vest is"],
+                        "answer": "not buying any fruit.",
+                        "foil1": "looking at the melon.",
+                        "foil2": "not walking away from the cart.",
+                        "foil3": "watching the fruit cart.",
+                        "sentenceLength": 50,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_8",
+              "description": "L1ST7P2S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 7,
+                "picNum": 2
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_8_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_8_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 102307,
+                        "sentNum": 3,
+                        "sentTypeDesc": "Prep phrases mod S, V, or O ",
+                        "stims": ["A hat sits"],
+                        "answer": "on the dog's head.",
+                        "foil1": "next to the melon.",
+                        "foil2": "the dog wears.",
+                        "foil3": "matches the dog's vest.",
+                        "sentenceLength": 28,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_9",
+              "description": "L1ST6P2S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 6,
+                "picNum": 2
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_9_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_9_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 102406,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Appositive phrase ",
+                        "stims": ["The pig, the one"],
+                        "answer": "in the background, wears a bow tie.",
+                        "foil1": "at the cart, knocks a melon to the ground.",
+                        "foil2": "wants to buy some grapes.",
+                        "foil3": "walking toward the cart.",
+                        "sentenceLength": 51,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_10",
+              "description": "L1ST13P2S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 13,
+                "picNum": 2
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_10_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_10_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 102513,
+                        "sentNum": 5,
+                        "sentTypeDesc": " Object relativization: SVO+mod ",
+                        "stims": ["No one looks at the melon"],
+                        "answer": "that has fallen on the ground.",
+                        "foil1": "that the dog is carrying away.",
+                        "foil2": "that is on the vine.",
+                        "foil3": "that is selling fruit.",
+                        "sentenceLength": 55,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_11",
+              "description": "L1ST1P3S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 1,
+                "picNum": 3
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_11_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_11_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 103101,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Attributive/stative: SV ",
+                        "stims": ["The grocer is"],
+                        "answer": "neat and tidy.",
+                        "foil1": "sawing a board.",
+                        "foil2": "messy.",
+                        "foil3": "neatly.",
+                        "sentenceLength": 27,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_12",
+              "description": "L1ST12P3S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 12,
+                "picNum": 3
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_12_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_12_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 103212,
+                        "sentNum": 2,
+                        "sentTypeDesc": " Subject relativization: S+mod+VO ",
+                        "stims": ["The carpenter that"],
+                        "answer": "works at the construction site saws a board.",
+                        "foil1": "saws a board at the construction site.",
+                        "foil2": "saws a board and makes a lot of sawdust.",
+                        "foil3": "works at the construction site sweeps the sawdust.",
+                        "sentenceLength": 62,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_13",
+              "description": "L1ST10P3S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 10,
+                "picNum": 3
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_13_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_13_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 103310,
+                        "sentNum": 3,
+                        "sentTypeDesc": "Commonly misused verbs ",
+                        "stims": ["All that sawing"],
+                        "answer": "raises a cloud of sawdust.",
+                        "foil1": "rises a cloud of sawdust.",
+                        "foil2": "rising clouds of sawdust.",
+                        "foil3": "rose the cloud of sawdust.",
+                        "sentenceLength": 41,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_14",
+              "description": "L1ST14P3S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 14,
+                "picNum": 3
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_14_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_14_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 103414,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Complex Sentences",
+                        "stims": ["The grocer grabbed a broom"],
+                        "answer": "when he saw the pile of sawdust.",
+                        "foil1": "above his store.",
+                        "foil2": "standing on the roof.",
+                        "foil3": "when the sidewalk was cleared.",
+                        "sentenceLength": 58,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_15",
+              "description": "L1ST9P3S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 9,
+                "picNum": 3
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_15_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_15_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 103509,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Pronoun (case & person/order) ",
+                        "stims": ["He"],
+                        "answer": "is cleaning up the sawdust.",
+                        "foil1": "are tidying the sawdust.",
+                        "foil2": "is watching the carpenter. ",
+                        "foil3": "are wishing the construction were over.",
+                        "sentenceLength": 29,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_16",
+              "description": "L1ST7P4S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 7,
+                "picNum": 4
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_16_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_16_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 104107,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Prep phrases mod S, V, or O ",
+                        "stims": ["A raccoon"],
+                        "answer": "eats on the bench.",
+                        "foil1": "sits near the bench.",
+                        "foil2": "juggles.",
+                        "foil3": "stands next to the bench.",
+                        "sentenceLength": 27,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_17",
+              "description": "L1ST8P4S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 8,
+                "picNum": 4
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_17_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_17_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 104208,
+                        "sentNum": 2,
+                        "sentTypeDesc": "Prep phrases + sentence ",
+                        "stims": ["In front of him,"],
+                        "answer": "one cat juggles splendidly.",
+                        "foil1": "two cats juggle adeptly.",
+                        "foil2": "he cannot see the cats.",
+                        "foil3": "although two cats try to juggle.",
+                        "sentenceLength": 43,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_18",
+              "description": "L1ST12P4S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 12,
+                "picNum": 4
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_18_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_18_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 104312,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Subject relativization: S+mod+VO ",
+                        "stims": ["The cat that wears a striped sweater"],
+                        "answer": "is not adept at juggling.",
+                        "foil1": "is clearly an expert juggler.",
+                        "foil2": "smiles proudly.",
+                        "foil3": "eats his sandwich.",
+                        "sentenceLength": 61,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_19",
+              "description": "L1ST4P4S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 4,
+                "picNum": 4
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_19_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_19_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 104404,
+                        "sentNum": 4,
+                        "sentTypeDesc": " Passive voice: OVS present & past ",
+                        "stims": ["The bumbling cat"],
+                        "answer": "has been hit on the head.",
+                        "foil1": "is tripping over the raccoon.",
+                        "foil2": "has fallen on the ground.",
+                        "foil3": "hits him on the head.",
+                        "sentenceLength": 41,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_20",
+              "description": "L1ST10P4S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 10,
+                "picNum": 4
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_20_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_20_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 104510,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Commonly misused verbs ",
+                        "stims": ["One of the juggling bags"],
+                        "answer": "has fallen under the bench.",
+                        "foil1": "sits on his sandwich.",
+                        "foil2": "fallen under the bench.",
+                        "foil3": "falls on the raccoon's head.",
+                        "sentenceLength": 51,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_21",
+              "description": "L1ST5P5S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 5,
+                "picNum": 5
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_21_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_21_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 105105,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Articles: definite & indefinite ",
+                        "stims": ["Three jolly ducks sing a song and"],
+                        "answer": "play with a rope.",
+                        "foil1": "play with ropes.",
+                        "foil2": "watch these rabbits.",
+                        "foil3": "watch that rabbit.",
+                        "sentenceLength": 50,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_22",
+              "description": "L1ST8P5S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 8,
+                "picNum": 5
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_22_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_22_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 105208,
+                        "sentNum": 2,
+                        "sentTypeDesc": "Prep phrases + sentence ",
+                        "stims": ["In a window above,"],
+                        "answer": "a rabbit holds a water balloon.",
+                        "foil1": "three ducks jump rope.",
+                        "foil2": "a happy rabbit jumps rope.",
+                        "foil3": "a rabbit sings, too.",
+                        "sentenceLength": 49,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_23",
+              "description": "L1ST3P5S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 3,
+                "picNum": 5
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_23_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_23_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 105303,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Infinitival complement to verb ",
+                        "stims": ["The mischievous rabbit wants"],
+                        "answer": "to drop the water balloon on the ducks.",
+                        "foil1": "jumping rope with the ducks.",
+                        "foil2": "to look down at the ducks.",
+                        "foil3": "dropping the water balloon on the ducks.",
+                        "sentenceLength": 67,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_24",
+              "description": "L1ST13P5S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 13,
+                "picNum": 5
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_24_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_24_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 105413,
+                        "sentNum": 4,
+                        "sentTypeDesc": " Object relativization: SVO+mod ",
+                        "stims": ["The ducks do not see"],
+                        "answer": "the rabbit that is in the window.",
+                        "foil1": "the ducks that are jumping rope.",
+                        "foil2": "the water balloon to the rabbit.",
+                        "foil3": "a mischievous rabbit lives upstairs.",
+                        "sentenceLength": 53,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_25",
+              "description": "L1ST15P5S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 15,
+                "picNum": 5
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_25_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_25_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 105515,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Compound Sentences",
+                        "stims": ["The rabbit waits for the ducks,"],
+                        "answer": "but they are not yet close enough.",
+                        "foil1": "while singing and jumping rope.",
+                        "foil2": "dropping the balloon on them.",
+                        "foil3": "patiently for them.",
+                        "sentenceLength": 65,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_26",
+              "description": "L1ST1P6S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 1,
+                "picNum": 6
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_26_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_26_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 106101,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Attributive/stative: SV ",
+                        "stims": ["Both the monkey and the horse"],
+                        "answer": "are busy.",
+                        "foil1": "are tearful.",
+                        "foil2": "tearfully.",
+                        "foil3": "busily.",
+                        "sentenceLength": 38,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_27",
+              "description": "L1ST4P6S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 4,
+                "picNum": 6
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_27_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_27_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 106204,
+                        "sentNum": 2,
+                        "sentTypeDesc": " Passive voice: OVS present & past ",
+                        "stims": ["The onions"],
+                        "answer": "are being cut by the monkey.",
+                        "foil1": "are cutting the monkey.",
+                        "foil2": "have been cut by the horse.",
+                        "foil3": "cut for the soup.",
+                        "sentenceLength": 38,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_28",
+              "description": "L1ST12P6S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 12,
+                "picNum": 6
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_28_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_28_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 106312,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Subject relativization: S+mod+VO ",
+                        "stims": ["The monkey that cuts the onions"],
+                        "answer": "weeps and complains.",
+                        "foil1": "with a knife.",
+                        "foil2": "puts vegetables into the soup.",
+                        "foil3": "crying and complaining.",
+                        "sentenceLength": 51,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_29",
+              "description": "L1ST8P6S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 8,
+                "picNum": 6
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_29_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_29_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 106408,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Prep phrases + sentence ",
+                        "stims": ["Next to the monkey,"],
+                        "answer": "the horse adds carrots and celery to the soup",
+                        "foil1": "the horse cries into the vegetable soup.",
+                        "foil2": "adding carrots and celery to the soup.",
+                        "foil3": "making a pot of vegetable soup.",
+                        "sentenceLength": 64,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_30",
+              "description": "L1ST5P6S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 5,
+                "picNum": 6
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_30_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_30_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 106505,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Articles: definite & indefinite ",
+                        "stims": ["The horse does not seem concerned"],
+                        "answer": "about the monkey's tears.",
+                        "foil1": "about a monkey's tears.",
+                        "foil2": "about monkey's tears.",
+                        "foil3": "with the monkeys.",
+                        "sentenceLength": 58,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_31",
+              "description": "L1ST5P7S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 5,
+                "picNum": 7
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_31_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_31_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 107105,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Articles: definite & indefinite ",
+                        "stims": ["An elephant and a giraffe"],
+                        "answer": "wait for a bus in the rain.",
+                        "foil1": "look at each other.",
+                        "foil2": "step onto a bus.",
+                        "foil3": "run to catch the bus.",
+                        "sentenceLength": 52,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_32",
+              "description": "L1ST9P7S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 9,
+                "picNum": 7
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_32_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_32_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 107209,
+                        "sentNum": 2,
+                        "sentTypeDesc": "Pronoun (case & person/order) ",
+                        "stims": ["They"],
+                        "answer": "both carry umbrellas.",
+                        "foil1": "carry an umbrella.",
+                        "foil2": "carry briefcases.",
+                        "foil3": "are getting soaked.",
+                        "sentenceLength": 25,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_33",
+              "description": "L1ST3P7S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 3,
+                "picNum": 7
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_33_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_33_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 107303,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Infinitival complement to verb ",
+                        "stims": ["The elephant"],
+                        "answer": "wants to have a bigger umbrella.",
+                        "foil1": "wishes his umbrella were smaller.",
+                        "foil2": "looks at the giraffe.",
+                        "foil3": "although his umbrella is too small.",
+                        "sentenceLength": 44,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_34",
+              "description": "L1ST11P7S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 11,
+                "picNum": 7
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_34_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_34_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 107411,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Simple Modifier ",
+                        "stims": ["He"],
+                        "answer": "hopelessly tries to stay dry.",
+                        "foil1": "glances miserably at the giraffe.",
+                        "foil2": "holds his briefcase under his umbrella.",
+                        "foil3": "enjoys being in the rain.",
+                        "sentenceLength": 31,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_35",
+              "description": "L1ST15P7S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 15,
+                "picNum": 7
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_35_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_35_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 107515,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Compound Sentences",
+                        "stims": ["The giraffe offers him"],
+                        "answer": "her handkerchief; however, it is too small to do much good.",
+                        "foil1": "her umbrella; nonetheless, he looks sad.",
+                        "foil2": "a ride instead of the bus.",
+                        "foil3": "to give him a handkerchief.",
+                        "sentenceLength": 81,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_36",
+              "description": "L1ST7P8S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 7,
+                "picNum": 8
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_36_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_36_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 108107,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Prep phrases mod S, V, or O ",
+                        "stims": ["A lizard and two mice"],
+                        "answer": "ride on a speeding trolley.",
+                        "foil1": "drive a speeding trolley.",
+                        "foil2": "live under a trolley.",
+                        "foil3": "ringing the bell.",
+                        "sentenceLength": 48,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_37",
+              "description": "L1ST3P8S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 3,
+                "picNum": 8
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_37_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_37_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 108203,
+                        "sentNum": 2,
+                        "sentTypeDesc": " Infinitival complement to verb ",
+                        "stims": ["The emotional lizard"],
+                        "answer": "wants to drive faster.",
+                        "foil1": "slows down.",
+                        "foil2": "to drive as quickly as possible.",
+                        "foil3": "enjoying himself.",
+                        "sentenceLength": 42,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_38",
+              "description": "L1ST2P8S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 2,
+                "picNum": 8
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_38_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_38_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 108302,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Simple negation ",
+                        "stims": ["The two worried mice"],
+                        "answer": "are not enjoying the ride.",
+                        "foil1": "should not drive this fast.",
+                        "foil2": "enjoy speeding along.",
+                        "foil3": "want a turn to ring the bell.",
+                        "sentenceLength": 46,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_39",
+              "description": "L1ST6P8S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 6,
+                "picNum": 8
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_39_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_39_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 108406,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Appositive phrase ",
+                        "stims": [
+                          "The mice, the only passengers on the trolley,"
+                        ],
+                        "answer": "look afraid.",
+                        "foil1": "recklessly speeds down the street.",
+                        "foil2": "worries about the speed of the trolley.",
+                        "foil3": "clutching their parcels.",
+                        "sentenceLength": 57,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_40",
+              "description": "L1ST14P8S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 14,
+                "picNum": 8
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_40_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_40_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 108514,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Complex Sentences",
+                        "stims": ["The female mouse gasps, while the"],
+                        "answer": "male mouse stares and loses his hat.",
+                        "foil1": "male mouse gasps.",
+                        "foil2": "conductor ringing the bell.",
+                        "foil3": "conductor grabs his hat.",
+                        "sentenceLength": 69,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_41",
+              "description": "L1ST4P9S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 4,
+                "picNum": 9
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_41_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_41_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 109104,
+                        "sentNum": 1,
+                        "sentTypeDesc": " Passive voice: OVS present & past ",
+                        "stims": ["A rocket ship"],
+                        "answer": "is being repaired by an astronaut.",
+                        "foil1": "repairs are underway.",
+                        "foil2": "is repairing an octopus astronaut.",
+                        "foil3": "by the starfish astronaut staring out the window.",
+                        "sentenceLength": 47,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_42",
+              "description": "L1ST11P9S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 11,
+                "picNum": 9
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_42_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_42_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 109211,
+                        "sentNum": 2,
+                        "sentTypeDesc": "Simple Modifier ",
+                        "stims": [
+                          "The astronaut is an octopus that holds tools"
+                        ],
+                        "answer": "expertly.",
+                        "foil1": "inside the rocket ship.",
+                        "foil2": "with the starfish.",
+                        "foil3": "a screwdriver and pliers.",
+                        "sentenceLength": 53,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_43",
+              "description": "L1ST9P9S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 9,
+                "picNum": 9
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_43_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_43_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 109309,
+                        "sentNum": 3,
+                        "sentTypeDesc": "Pronoun (case & person/order) ",
+                        "stims": ["He"],
+                        "answer": "uses a screwdriver and pliers.",
+                        "foil1": "toolkit has everything he might need.",
+                        "foil2": "fix the rocket ship together.",
+                        "foil3": "smile out the porthole.",
+                        "sentenceLength": 32,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_44",
+              "description": "L1ST13P9S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 13,
+                "picNum": 9
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_44_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_44_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 109413,
+                        "sentNum": 4,
+                        "sentTypeDesc": " Object relativization: SVO+mod ",
+                        "stims": ["A starfish watches"],
+                        "answer": "the octopus that is repairing the rocket.",
+                        "foil1": "repairing the rocket.",
+                        "foil2": "the octopus repairs the rocket.",
+                        "foil3": "the porthole of the rocket that is being repaired.",
+                        "sentenceLength": 59,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_45",
+              "description": "L1ST15P9S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 15,
+                "picNum": 9
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_45_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_45_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 109515,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Compound Sentences",
+                        "stims": ["The octopus holds many tools;"],
+                        "answer": "however, he seems to be using them expertly.",
+                        "foil1": "hence, the starfish frowns.",
+                        "foil2": "nevertheless, the starfish helps him.",
+                        "foil3": "however expert he seems to be when he uses them.",
+                        "sentenceLength": 73,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_46",
+              "description": "L1ST5P10S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 5,
+                "picNum": 10
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_46_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_46_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 110105,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Articles: definite & indefinite ",
+                        "stims": ["A baseball player and an umpire"],
+                        "answer": "quarrel over a decision.",
+                        "foil1": "work together.",
+                        "foil2": "play baseball.",
+                        "foil3": "argue, along with a stork.",
+                        "sentenceLength": 55,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_47",
+              "description": "L1ST1P10S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 1,
+                "picNum": 10
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_47_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_47_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 110201,
+                        "sentNum": 2,
+                        "sentTypeDesc": "Attributive/stative: SV ",
+                        "stims": ["The shocked stork's stockings"],
+                        "answer": "are scarlet.",
+                        "foil1": "over the fence.",
+                        "foil2": "is brightly colored.",
+                        "foil3": "cap.",
+                        "sentenceLength": 41,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_48",
+              "description": "L1ST11P10S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 11,
+                "picNum": 10
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_48_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_48_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 110311,
+                        "sentNum": 3,
+                        "sentTypeDesc": "Simple Modifier ",
+                        "stims": ["The puma argues"],
+                        "answer": "loudly with the umpire.",
+                        "foil1": "with a glove and a hat.",
+                        "foil2": "has a long tail.",
+                        "foil3": "the umpire loudly.",
+                        "sentenceLength": 38,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_49",
+              "description": "L1ST6P10S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 6,
+                "picNum": 10
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_49_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_49_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 110406,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Appositive phrase ",
+                        "stims": ["The umpire, a bighorn sheep,"],
+                        "answer": "looks sternly at the puma.",
+                        "foil1": "arguing with the player.",
+                        "foil2": "watches both of them.",
+                        "foil3": "yells at the puma.",
+                        "sentenceLength": 54,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_50",
+              "description": "L1ST15P10S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 15,
+                "picNum": 10
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_50_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_50_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 110515,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Compound Sentences",
+                        "stims": [
+                          "The puma wants the umpire to change his mind, but"
+                        ],
+                        "answer": "the umpire is unyielding.",
+                        "foil1": "the umpire agrees.",
+                        "foil2": "the stork watches.",
+                        "foil3": "the puma argues loudly.",
+                        "sentenceLength": 74,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_51",
+              "description": "L1ST2P11S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 2,
+                "picNum": 11
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_51_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_51_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 111102,
+                        "sentNum": 1,
+                        "sentTypeDesc": " Simple negation ",
+                        "stims": ["A raccoon sheriff"],
+                        "answer": "is not happy with his deputy.",
+                        "foil1": "is not on the lookout for a coyote outlaw.",
+                        "foil2": "is happy with his snake deputy.",
+                        "foil3": "laughs at his deputy.",
+                        "sentenceLength": 46,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_52",
+              "description": "L1ST4P11S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 4,
+                "picNum": 11
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_52_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_52_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 111204,
+                        "sentNum": 2,
+                        "sentTypeDesc": " Passive voice: OVS present & past ",
+                        "stims": ["The sheriff is "],
+                        "answer": "being mocked by his deputy.",
+                        "foil1": "laughing at the outlaw, along with his deputy.",
+                        "foil2": "teasing the snake deputy.",
+                        "foil3": "arresting his deputy.",
+                        "sentenceLength": 42,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_53",
+              "description": "L1ST7P11S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 7,
+                "picNum": 11
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_53_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_53_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 111307,
+                        "sentNum": 3,
+                        "sentTypeDesc": "Prep phrases mod S, V, or O ",
+                        "stims": ["The outlaw, with his black mask,"],
+                        "answer": "looks a lot like the raccoon sheriff.",
+                        "foil1": "looks at the snake deputy.",
+                        "foil2": "looks a bit like the snake deputy.",
+                        "foil3": "looks through the window.",
+                        "sentenceLength": 69,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_54",
+              "description": "L1ST12P11S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 12,
+                "picNum": 11
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_54_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_54_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 111412,
+                        "sentNum": 4,
+                        "sentTypeDesc": " Subject relativization: S+mod+VO ",
+                        "stims": ["The officer that "],
+                        "answer": "laughs has noticed that the two look alike.",
+                        "foil1": "laughing at the sheriff has noticed that the two look alike.",
+                        "foil2": "looks like the outlaw laughs at the sheriff.",
+                        "foil3": "is a snake laughing at the sheriff.",
+                        "sentenceLength": 60,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_55",
+              "description": "L1ST9P11S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 9,
+                "picNum": 11
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_55_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_55_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 111509,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Pronoun (case & person/order) ",
+                        "stims": ["The sheriff glares since he"],
+                        "answer": "does not see the humor.",
+                        "foil1": "do not think it is funny.",
+                        "foil2": "thinking that it is not funny.",
+                        "foil3": "not thinking that it is funny.",
+                        "sentenceLength": 50,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_56",
+              "description": "L1ST8P12S1",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 8,
+                "picNum": 12
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_56_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_56_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 112108,
+                        "sentNum": 1,
+                        "sentTypeDesc": "Prep phrases + sentence ",
+                        "stims": [
+                          "In front of a table of guests, the Swiss chef"
+                        ],
+                        "answer": "shows off a fancy hamburger.",
+                        "foil1": "enjoys a fancy hamburger.",
+                        "foil2": "claps wildly.",
+                        "foil3": "explaining the specials for the day.",
+                        "sentenceLength": 73,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_57",
+              "description": "L1ST13P12S2",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 13,
+                "picNum": 12
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_57_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_57_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 112213,
+                        "sentNum": 2,
+                        "sentTypeDesc": " Object relativization: SVO+mod ",
+                        "stims": ["The patrons approve of the hamburger"],
+                        "answer": "that the chef displays.",
+                        "foil1": "that is on the table.",
+                        "foil2": "with the chef.",
+                        "foil3": "next door.",
+                        "sentenceLength": 59,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_58",
+              "description": "L1ST3P12S3",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 3,
+                "picNum": 12
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_58_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_58_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 112303,
+                        "sentNum": 3,
+                        "sentTypeDesc": " Infinitival complement to verb ",
+                        "stims": ["All of the hungry patrons would"],
+                        "answer": "like to order the hamburger.",
+                        "foil1": "enjoys the broth.",
+                        "foil2": "clapping for the chef.",
+                        "foil3": "prefer to ignore the chef.",
+                        "sentenceLength": 59,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_59",
+              "description": "L1ST10P12S4",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 10,
+                "picNum": 12
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_59_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_59_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 112410,
+                        "sentNum": 4,
+                        "sentTypeDesc": "Commonly misused verbs ",
+                        "stims": [
+                          "The lion has knocked over her broth, which is"
+                        ],
+                        "answer": "falling to the ground.",
+                        "foil1": "fallen on the ground.",
+                        "foil2": "falls to the ground.",
+                        "foil3": "fell to the ground.",
+                        "sentenceLength": 67,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "B_3_1_60",
+              "description": "L1ST14P12S5",
+              "type": "TODNSStatement",
+              "override": {
+                "level": 1,
+                "sentType": 14,
+                "picNum": 12
+              },
+              "percentCorrect": 100,
+              "children": [
+                {
+                  "id": "B_3_1_60_1",
+                  "description": "Segment 1",
+                  "type": "DNWrapper",
+                  "children": [
+                    {
+                      "id": "B_3_1_60_1_D",
+                      "type": "DataNode",
+                      "description": "data node",
+                      "data": {
+                        "viewID": "com.scilearn.ArtWalk.NormalGameplay",
+                        "trialID": 112514,
+                        "sentNum": 5,
+                        "sentTypeDesc": "Complex Sentences",
+                        "stims": ["They will probably order the fancy burger"],
+                        "answer": "after they finish clapping.",
+                        "foil1": "to the Swiss restaurant.",
+                        "foil2": "whether they order the hamburger.",
+                        "foil3": "until they leave the restaurant.",
+                        "sentenceLength": 68,
+                        "totalSegments": 1,
+                        "segmentNum": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B_4",
+      "type": "DNWrapper",
+      "description": "TODNS game over node",
+      "guard": "(${GamePlayComplete})",
+      "children": [
+        {
+          "id": "B_4_1",
+          "type": "DataNode",
+          "description": "game over",
+          "data": {
+            "gameOver": true,
+            "viewID": "com.scilearn.ArtWalk.GameOver"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -48,10 +48,10 @@ export class UploadTaskComponent implements OnInit {
       // The file's download URL
       finalize(async () => {
         this.downloadURL = await ref.getDownloadURL().toPromise();
-
-        this.db
-          .collection('files')
-          .add({ downloadURL: this.downloadURL, path });
+        // console.log('ref', ref);
+        // this.db
+        //   .collection('files')
+        //   .add({ downloadURL: this.downloadURL, path });
       })
     );
   }
